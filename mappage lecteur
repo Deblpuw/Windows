@@ -7,6 +7,11 @@ net use m: \\server\nom-de-partage1
 
 net use \\Mac-PC\test /USER:demo toto
 
-# Pour Supprimer le lecteur on utilise la commande /Delete avec loption /f pour forcer la suppression du mappage au cas ou il y aurait des fichier ouvert depuis celui-ci
+# Pour Supprimer le lecteur on utilise la commande /Delete 
 
 net use m: /delete
+
+# Par défaut, le lecteur réseau n’est pas persistant ainsi au prochain redémarrage de la session utilisateur, il ne sera pas monté.
+# Il faut utiliser le paramètre /p mais aussi enregistré les informations de connexion avec le paramètre /savecred.
+
+net use Z: \\Mac-PC\test /USER:demo toto /p:yes /savecred
