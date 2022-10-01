@@ -1,0 +1,12 @@
+# On utilise la commande net use puis la lettre que l'on veux attribuer au lecteur (m:) puis le chemin reseau du dossier a monter en tant que lecteur.
+# On peut rajouter l'option /p:no ou /persistent:no pour evitez que le lecteur reste connecter
+
+net use m: \\server\nom-de-partage1 
+
+# On peux aussi utiliser un utilisateur et un mot de passe.
+
+net use \\Mac-PC\test /USER:demo toto
+
+# Pour Supprimer le lecteur on utilise la commande /Delete avec l'argument /f pour forcer la suppression du mappage au cas ou il y aurait des fichier ouvert depuis celui-ci
+
+net use m: /delete
